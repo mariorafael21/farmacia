@@ -13,9 +13,13 @@ import java.io.IOException;
 @Controller
 public class CadastroProduto {
 
-    @RequestMapping(value = "/produtos", method = RequestMethod.GET)
-    public void Cadastrar (HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
+    @RequestMapping(value = "/cadastrarProduto", method = RequestMethod.GET)
+    public void DoCadastrar (HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         response.getWriter().println("Cadastrar Produtos");
+    }
+    @RequestMapping(value = "/listarProduto", method = RequestMethod.POST)
+    public void DoListar (HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
+        response.getWriter().println("Listagem de Produtos");
     }
 
 }
